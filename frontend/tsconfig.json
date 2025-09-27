@@ -1,6 +1,14 @@
 {
   "compilerOptions": {
     "target": "ESNext",
+    "paths": {
+      "@/*": ["./src/*"],
+      "@app/*": ["./src/app/*"],
+      "@widgets/*": ["./src/widgets/*"],
+      "@pages/*": ["./src/pages/*"],
+      "@shared/*": ["./src/shared/*"],
+      "@components/*": ["./src/components/*"],
+    },
     "useDefineForClassFields": true,
     "lib": [
       "DOM",

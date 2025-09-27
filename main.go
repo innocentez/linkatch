@@ -2,6 +2,8 @@ package main
 
 import (
 	"embed"
+	"linkatch/internal/service/category"
+	"linkatch/internal/service/resource"
 
 	"github.com/wailsapp/wails/v2"
 	"github.com/wailsapp/wails/v2/pkg/options"
@@ -12,8 +14,12 @@ import (
 var assets embed.FS
 
 func main() {
+
 	// Create an instance of the app structure
 	app := NewApp()
+
+	categoryService := category.NewCategoryService()
+	resourceService := resource.NewResourceService()
 
 	// Create application with options
 	err := wails.Run(&options.App{
@@ -27,6 +33,8 @@ func main() {
 		OnStartup:        app.startup,
 		Bind: []interface{}{
 			app,
+			categoryService,
+			resourceService,
 		},
 	})
 

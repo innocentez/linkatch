@@ -1,0 +1,16 @@
+// import {Modals} from "@shared/stores/modals";
+// import {CategoryStore} from "@entities/Category";
+// import {ResourceStore} from "@entities/Resource/model/stores/resource";
+//
+// export class Index {
+//     modal = new Modals();
+//     category = new CategoryStore();
+//     resource = new ResourceStore();
+// }
+//
+// let _root: Index | null = null;
+//
+// export function getRootStore() {
+//     if (!_root) _root = new Index();
+//     return _root;
+// }
